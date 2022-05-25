@@ -1102,7 +1102,7 @@ function _owl_carousel() {
           singleItem: true,
           itemsScaleUp: false,
 
-          slideSpeed: 10000,
+          slideSpeed: 200,
           paginationSpeed: 800,
           rewindSpeed: 1000,
 
