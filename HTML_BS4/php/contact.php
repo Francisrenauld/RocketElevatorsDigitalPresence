@@ -23,7 +23,7 @@
 		// catch post data
 		$post_data 	= isset($_POST['contact']) ? $_POST['contact'] : null;
 		$is_ajax 	= (isset($_POST['is_ajax']) && $_POST['is_ajax'] == 'true') ? true : false;
-
+			
 
 		// CHECK RECAPTCHA - IF PASSED => IS REQUIRED
 		if(isset($_POST['g-recaptcha-response']) && (trim($_POST['g-recaptcha-response'])  == '' || strlen(trim($_POST['g-recaptcha-response'])) < 10 )) {
@@ -276,6 +276,8 @@
 		#alert_failed		= email not sent - internal server error (404 error or SMTP problem)
 		#alert_mandatory	= email not sent - required fields empty
  ** ******************************** **/
+
+
 	function _redirect($hash) {
 		
 		$HTTP_REFERER = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : null;
