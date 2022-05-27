@@ -147,7 +147,7 @@
 				.dark			= dark header
 				.bottom			= header on bottom
 				
-				shadow-before-1 = shadow 1 header top
+				shadow-before-1 = shadow 1 header top 
 				shadow-after-1 	= shadow 1 header bottom
 				shadow-before-2 = shadow 2 header top
 				shadow-after-2 	= shadow 2 header bottom
@@ -188,28 +188,28 @@
 								-->
             <ul id="topMain" class="nav nav-pills nav-main nav-onepage">
               <li class="active">
-                <!-- HOME -->
-                <a href="#home"> HOME </a>
+                <!-- home -->
+                <a href="#home-nav"> home </a>
               </li>
               <li>
                 <!-- SERVICES -->
-                <a href="#services"> SERVICES </a>
+                <a href="#services-nav"> SERVICES </a>
               </li>
               <li>
                 <!-- WORK -->
-                <a href="#portfolio"> PORTFOLIO </a>
+                <a href="#portfolio-nav"> PORTFOLIO </a>
               </li>
               <li>
                 <!-- NEWS -->
-                <a href="#news"> NEWS </a>
+                <a href="#news-nav"> NEWS </a>
               </li>
               <li>
                 <!-- CLIENTS -->
-                <a href="#clients"> CLIENTS </a>
+                <a href="#clients-nav"> CLIENTS </a>
               </li>
               <li>
                 <!-- CONTACT -->
-                <a href="#contact"> CONTACT </a>
+                <a href="#contact-nav"> CONTACT </a>
               </li>
             </ul>
           </nav>
@@ -250,7 +250,7 @@
 						data-height="800"
 				-->
     <div class="fullwidthbanner" data-height="600" data-shadow="0" data-navigationStyle="preview2">
-      <ul id="home" class="hide">
+      <ul id="home-nav" class="hide">
         <!-- SLIDE  -->
         <li data-transition="parallaxtotop" data-slotamount="7" data-masterspeed="300" data-saveperformance="off"
           data-title="Who We Are">
@@ -284,7 +284,8 @@
           <div class="tp-caption sfb tp-resizeme" data-x="50" data-y="410" data-speed="500" data-start="1500"
             data-easing="Power3.easeIn" data-splitin="none" data-splitout="none" data-elementdelay="1"
             data-endelementdelay="0.1" data-endspeed="500" style="z-index: 4; max-width: auto">
-            <a class="btn btn-warning btn-lg" href="#services" style="background-color: blue; border-color: red">OUR
+            <a class="btn btn-warning btn-lg scrollTo" href="#services-nav"
+              style="background-color: blue; border-color: red">OUR
               SERVICES
               &nbsp; <i class="fa fa-angle-right"></i></a>
           </div>
@@ -297,7 +298,7 @@
                   max-height: auto;
                   white-space: nowrap;
                 ">
-            <a class="btn btn-default btn-lg" href="#" style="
+            <a class="btn btn-default btn-lg" href="formulaire.html#" style="
                     background-color: rgb(255, 0, 0);
                     border-color: rgb(76, 76, 255);
                   ">QUOTE REQUEST FORM &nbsp; <i class="fa fa-angle-right"></i></a>
@@ -402,7 +403,7 @@
                   max-height: auto;
                   white-space: nowrap;
                 ">
-            <a class="btn btn-warning btn-lg" href="corporate.html#"
+            <a class="btn btn-warning btn-lg" href="commercial.html"
               style="background-color: blue; border-color: red">CORPORATE
               SERVICES &nbsp; <i class="fa fa-angle-right"></i></a>
           </div>
@@ -417,8 +418,8 @@
 
   <!-- BUTTON CALLOUT -->
 
-  <a href="#contact" style="background-color: gray; border-color: gray"
-    class="btn btn-xlg btn-primary fs-20 fullwidth m-0 rad-0 p-40">
+  <a href="#contact-nav" style="background-color: gray; border-color: gray"
+    class="btn btn-xlg btn-primary fs-20 fullwidth m-0 rad-0 p-40 scrollTo">
     <span class="font-lato fs-30">
       Did Rocket Elevator conviced you?
       <strong>Contact us &raquo;</strong>
@@ -428,7 +429,7 @@
   <!-- /BUTTON CALLOUT -->
 
   <!-- Services -->
-  <section id="services">
+  <section id="services-nav">
     <div class="container">
       <div class="row">
         <div class="col-sm-4">
@@ -440,7 +441,7 @@
               Corporate building, there is something for every taste
             </strong>
           </p>
-          <a href="corporate.html" class="btn btn-default">READ MORE</a>
+          <a href="commercial.html" class="btn btn-default">READ MORE</a>
         </div>
 
         <div class="col-sm-4">
@@ -465,7 +466,7 @@
               have won go check out what we did if you dont allready know
             </strong>
           </p>
-          <a href="#portfolio" class="btn btn-default">READ MORE</a>
+          <a href="#portfolio" class="btn btn-default scrollTo">READ MORE</a>
         </div>
       </div>
     </div>
@@ -484,15 +485,16 @@
         <a class="btn btn-default btn-lg" href="#" style=" background-color: rgb(80, 80, 255)">
           REQUEST FOR SUBMISSION<i class="fa fa-angle-right"></i></a>
         &nbsp; OR &nbsp;
-        <a class="btn btn-default btn-lg" href="#contact" style="background-color: rgb(255, 65, 65);">CONTACT US<i
-            class="fa fa-angle-right"></i></a>
+        <a class="btn btn-default btn-lg scrollTo" href="#contact-nav"
+          style="background-color: rgb(255, 65, 65);">CONTACT
+          US<i class="fa fa-angle-right"></i></a>
       </div>
     </div>
   </section>
   <!-- /Parallax -->
 
   <!-- PORTFOLIO -->
-  <section id="portfolio">
+  <section id="portfolio-nav">
     <div class="container">
       <div class="heading-title heading-dotted text-center">
         <h2>What We Have Done</h2>
@@ -1070,7 +1072,7 @@
   <!-- /Testimonials -->
 
   <!-- News -->
-  <section id="news">
+  <section id="news-nav">
     <div class="container">
       <div class="heading-title heading-dotted text-center">
         <h2>Recent News</h2>
@@ -1410,7 +1412,7 @@
   <!-- /Overview -->
 
   <!-- Clients -->
-  <section id="clients" class="alternate">
+  <section id="clients-nav" class="alternate">
     <div class="container">
       <div class="heading-title heading-dotted text-center">
         <h2>Our Clients</h2>
@@ -1483,7 +1485,7 @@
   <!-- /Clients -->
 
   <!-- CONTACT -->
-  <section id="contact">
+  <section id="contact-nav">
     <div class="container">
       <header class="text-center mb-60">
         <h2>Contact Us</h2>
@@ -1559,23 +1561,22 @@
               <div class="row">
                 <div class="col-md-4">
                   <label for="contact:name">Full Name *</label>
-                  <input required type="text" value="" class="form-control" name="contact[name][required]"
-                    id="contact:name" />
+                  <input required type="text" value="" class="form-control" name="contact[name][required]" id="name" />
                 </div>
 
                 <div class="col-md-4">
                   <label for="contact:email">E-mail Address *</label>
                   <input required type="email" value="" class="form-control" name="contact[email][required]"
-                    id="contact:email" />
+                    id="email" />
                 </div>
                 <div class="col-md-4">
                   <label for="contact:email">Company Name *</label>
                   <input required type="email" value="" class="form-control" name="contact[email][required]"
-                    id="contact:email" />
+                    id="company_name" />
                 </div>
                 <div class="col-md-4">
                   <label style="margin-top: 25px;" for="contact:phone">Phone *</label>
-                  <input required type="text" value="" class="form-control" name="contact[phone]" id="contact:phone" />
+                  <input required type="text" value="" class="form-control" name="contact[phone]" id="phone" />
                 </div>
                 <div class="col-md-4">
                   <label style="margin-top: 25px;" for="contact_department">Department</label>
@@ -1591,7 +1592,7 @@
                 <div class="col-md-8">
                   <label for="contact:subject">Name of the real estate project *</label>
                   <input required type="text" value="" class="form-control" name="contact[subject][required]"
-                    id="contact:subject" />
+                    id="project_name" />
                 </div>
 
               </div>
@@ -1599,19 +1600,19 @@
                 <div class="col-md-12">
                   <label for="contact:message">Project description *</label>
                   <textarea required maxlength="10000" rows="5" class="form-control" name="contact[message]"
-                    id="contact:message"></textarea>
+                    id="project_description"></textarea>
                 </div>
               </div>
               <div class="row">
                 <div class="col-md-12">
                   <label for="contact:message">Message *</label>
                   <textarea required maxlength="10000" rows="5" class="form-control" name="contact[message]"
-                    id="contact:message"></textarea>
+                    id="message"></textarea>
                 </div>
               </div>
               <div class="row">
                 <div class="col-md-12">
-                  <label for="contact:attachment">File Attachment</label>
+                  <label for="attachment">File Attachment</label>
 
                   <!-- custom file upload -->
                   <input class="custom-file-upload" type="file" id="file" name="contact[attachment]"
