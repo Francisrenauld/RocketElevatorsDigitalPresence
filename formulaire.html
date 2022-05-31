@@ -29,6 +29,7 @@
     <!-- THEME CSS -->
     <link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/quote.css" rel="stylesheet" type="text/css" />
 
     <!-- PAGE LEVEL SCRIPTS -->
     <link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
@@ -92,19 +93,203 @@
     </div>
 
     <!-- Parallax -->
-    <section class="parallax parallax-1" style="background-image: url('assets/image/AdobeStock_66781279.jpeg')">
+    <section class="parallax parallax-1" style="background-image: url('assets/image/AdobeStock_3294993.jpeg')">
         <div class="overlay dark-5">
-            <!-- dark overlay [1 to 9 opacity] -->
+
         </div>
 
         <div class="container">
             <div class="text-center">
-                <h2 class="fs-40 fw-300">OUR CORPORATE MODELS</h2>
+                <h2 class="fs-40 fw-300">ROCKET ELEVATOR SUBMISSION QUOTE</h2>
 
             </div>
         </div>
     </section>
-    <!-- /Parallax -->
+
+    <!--Formulaire-->
+    <section>
+        <div id="quote">
+            <div class="menu">
+                <label for="listimmeubles">
+                    <h1>Building Type</h1>
+                </label>
+                <select name="myselect" id="building-type">
+                    <option id="residential" name="residential" value="residential">Residential</option>
+                    <option id="corporate" name="corporate" value="corporate">Corporate</option>
+                    <option id="cormmercial" name="commercial" value="commercial">commercial</option>
+                    <option id="hybride" name="hybride" value="hybride">hybride</option>
+                </select>
+            </div>
+
+
+            <div id="residentialoption" class="residentialoption">
+
+                <div>
+                    <label for="nbappartement">Number of apartments</label>
+                    <input type="number" name="nombreporte" id="number-of-apartments" min="0">
+                </div>
+
+                <div>
+                    <label for="nbappartement">Number of floors</label>
+                    <input type="number" name="nbfloors" id="number-of-floors" min="0">
+                </div>
+
+                <div>
+                    <label for="nbappartement">Number of basements</label>
+                    <input type="number" name="nbbasement" id="number-of-basements" min="0">
+                </div>
+
+            </div>
+
+
+            <div id="commercialoption" class="commercialoption">
+
+                <div>
+                    <label for="nbappartement">number of distinct businesses</label>
+                    <input type="number" name="nbbusinesses" id="number-of-companies" min="0">
+                </div>
+
+                <div>
+                    <label for="nbappartement">Number of floors</label>
+                    <input type="number" name="nbfloors" id="number-of-floors" min="0">
+                </div>
+
+                <div>
+                    <label for="nbappartement">Number of basements</label>
+                    <input type="number" name="nbbasement" id="number-of-basements" min="0">
+                </div>
+
+                <div>
+                    <label for="nbappartement">Number of parking spaces</label>
+                    <input type="number" name="nbparking" id="number-of-parking-spots" min="0">
+                </div>
+
+                <div>
+                    <label for="nbappartement">Deployable elevator shafts</label>
+                    <input type="number" name="nbelevator" id="number-of-elevators" min="0">
+                </div>
+
+            </div>
+
+
+            <div id="corporateoption" class="corporateoption">
+
+                <div>
+                    <label for="nbappartement">Number of separate companies</label>
+                    <input type="number" name="nbcompanies" id="number-of-corporations" min="0">
+                </div>
+
+                <div>
+                    <label for="nbappartement">Number of floors</label>
+                    <input type="number" name="nbfloors" id="number-of-floors" min="0">
+                </div>
+
+                <div>
+                    <label for="nbappartement">Number of basements</label>
+                    <input type="number" name="nbbasement" id="number-of-basements" min="0">
+                </div>
+
+                <div>
+                    <label for="nbappartement">Number of parking spaces</label>
+                    <input type="number" name="nbparking" id="number-of-parking-spots" min="0">
+                </div>
+
+                <div>
+                    <label for="nbappartement">Maximum number of occupants per floor</label>
+                    <input type="number" name="nboccupant" id="maximum-occupancy" min="0">
+                </div>
+            </div>
+
+            <div id="hybrideoption" class="hybrideoption">
+
+                <div>
+                    <label for="nbappartement">Number of distinct businesses</label>
+                    <input type="number" name="nbbusinesse" id="number-of-companies" min="0">
+                </div>
+
+                <div>
+                    <label for="nbappartement">Number of floors</label>
+                    <input type="number" name="nbfloor" id="number-of-floors" min="0">
+                </div>
+
+                <div>
+                    <label for="nbappartement">Number of basements</label>
+                    <input type="number" name="nbbasement" id="number-of-basements" min="0">
+                </div>
+
+                <div>
+                    <label for="nbappartement">Number of parking spaces</label>
+                    <input type="number" name="nbparking" id="number-of-parking-spots" min="0">
+                </div>
+
+                <div>
+                    <label for="nbappartement">Maximum number of occupants per floor</label>
+                    <input type="number" name="nboccupants" id="maximum-occupancy" min="0">
+                </div>
+
+                <div>
+                    <label for="nbappartement">Number of hours of activity of the building</label>
+                    <input type="number" name="nboccupants" id="business-hours" min="0" max="24">
+                </div>
+            </div>
+
+            <hr class="m-20" />
+            <!-- 1px line separator -->
+
+            <div id="elevatoroption" class="elevatoroption">
+
+                <div>
+                    <label for="quality">Standard</label>
+                    <input type="radio" name="type" id="standard" min="0">
+                </div>
+
+                <div>
+                    <label for="quality">Prenium</label>
+                    <input type="radio" name="type" id="premium" min="0">
+                </div>
+
+                <div>
+                    <label for="quality">Excelium</label>
+                    <input type="radio" name="type" id="excelium" min="0">
+                </div>
+
+            </div>
+
+            <hr class="m-0" />
+            <!-- 1px line separator -->
+
+            <fieldset>
+                <legend>Price$</legend>
+
+                <div>
+                    <label for="elevatorprice">Number Of Elevators:</label>
+                    <input type="number" name="price1" id="numberelevator" min="0" disabled>
+                </div>
+
+                <div>
+                    <label for="elevatorprice">Elevator Unit Price:</label>
+                    <input type="number" name="price1" id="elevatorprice" min="0" disabled>
+                </div>
+
+                <div>
+                    <label for="elevatorpricetotal">Elevator Total Cost:</label>
+                    <input type="number" name="price1" id="elevatorTotalCost" min="0" disabled>
+                </div>
+
+                <div>
+                    <label for="nbappartement">Installation costs:</label>
+                    <input type="number" name="price2" id="installationcost" min="0" disabled>
+                </div>
+
+                <div>
+                    <label for="nbappartement">Total project cost:</label>
+                    <input type="number" name="price3" id="projectcost" min="0" disabled>
+                </div>
+
+            </fieldset>
+        </div>
+    </section>
+
 
 
 
@@ -121,7 +306,8 @@
 
                     <!-- Small Description -->
                     <p>
-                        We are the best elevator compagny on the market right now. We have have everything for any type
+                        We are the best elevator compagny on the market right now. We have have everything for
+                        any type
                         of
                         residential or
                         corporate building. Call us and we do the rest for you.
@@ -187,7 +373,7 @@
         var plugin_path = "assets/plugins/";
     </script>
     <script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
-
+    <script src="assets/js/quote.js"></script>
     <script src="assets/js/scripts.js"></script>
 
     <!-- STYLESWITCHER - REMOVE -->
