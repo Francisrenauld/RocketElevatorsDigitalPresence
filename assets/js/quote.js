@@ -83,7 +83,7 @@ function CalculateResidential() {
 
     var nbElevator = 0;
 
-    var nbElevatorCol = 0;
+    var nbElevatorTot = 0;
 
     $("#residentialoption").change(function () {
 
@@ -95,11 +95,13 @@ function CalculateResidential() {
 
         nbElevator = Math.ceil(averageAppartmentsFloor / 6);
 
-        nbElevatorCol = Math.ceil(nbFloors / 20)
+        nbElevatorTot = Math.ceil(nbFloors / 20)
 
-        nbElevatorCol *= nbElevator;
+        nbElevatorTot *= nbElevator;
 
-        $("#numberelevator").val(nbElevatorCol);
+        CalculPrice(nbElevatorTot)
+
+        $("#numberelevator").val(nbElevatorTot);
 
     });
 
@@ -112,6 +114,8 @@ function CalculateCommercial() {
     $("#number-of-elevators").change(function () {
 
         nbElevator = $("#number-of-elevators").val();
+
+        CalculPrice(nbElevator)
 
         $("#numberelevator").val(nbElevator);
 
@@ -159,6 +163,8 @@ function CalculateCorporate() {
 
         nbtotalElevators = nbAverageElevatorColumn * nbColumn;
 
+        CalculPrice(nbtotalElevators);
+
         $("#numberelevator").val(nbtotalElevators);
     });
 
@@ -204,7 +210,93 @@ function CalculateHybrid() {
 
         nbtotalElevators = nbAverageElevatorColumn * nbColumn;
 
+        CalculPrice(nbtotalElevators)
+
         $("#numberelevator").val(nbtotalElevators);
     });
+
+}
+
+function CalculPrice(nbElevator) {
+
+    var installationPourcentage = 0;
+
+    var installPrice = 0;
+
+    var elevatorPriceUnit = 0;
+
+    var elevatorTotPrice = 0;
+
+    var bigTotal = 0;
+
+    $("input[type='radio").change(function () {
+
+        if ($(this).val() == "standard") {
+
+            installationPourcentage = 0.1;
+
+            elevatorPriceUnit = 7565;
+
+            elevatorTotPrice = elevatorPriceUnit * nbElevator;
+
+            installPrice = elevatorTotPrice * installationPourcentage;
+
+            bigTotal = installPrice + elevatorTotPrice;
+
+            $("#installationcost").val(installPrice);
+
+            $("#elevatorprice").val(elevatorPriceUnit);
+
+            $("#elevatorTotalCost").val(elevatorTotPrice);
+
+            $("#projectcost").val(bigTotal);
+
+        }
+        if ($(this).val() == "premium") {
+
+            installationPourcentage = 0.13;
+
+            elevatorPriceUnit = 12345;
+
+            elevatorTotPrice = elevatorPriceUnit * nbElevator;
+
+            installPrice = elevatorTotPrice * installationPourcentage;
+
+            bigTotal = installPrice + elevatorTotPrice;
+
+            $("#installationcost").val(installPrice);
+
+            $("#elevatorprice").val(elevatorPriceUnit);
+
+            $("#elevatorTotalCost").val(elevatorTotPrice);
+
+            $("#projectcost").val(bigTotal);
+
+        }
+        if ($(this).val() == "excelium") {
+
+            installationPourcentage = 0.16;
+
+            elevatorPriceUnit = 15400;
+
+            elevatorTotPrice = elevatorPriceUnit * nbElevator;
+
+            installPrice = elevatorTotPrice * installationPourcentage;
+
+            bigTotal = installPrice + elevatorTotPrice;
+
+            $("#installationcost").val(installPrice);
+
+            $("#elevatorprice").val(elevatorPriceUnit);
+
+            $("#elevatorTotalCost").val(elevatorTotPrice);
+
+            $("#projectcost").val(bigTotal);
+
+        }
+
+    });
+
+
 
 }
