@@ -75,20 +75,15 @@ $("#building-type").trigger("change");
 
 function CalculateResidential() {
 
-    let wentIn = false;
-
     var averageAppartmentsFloor = 0;
 
     var nbAppartments = 0;
 
     var nbFloors = 0;
 
-    var counter = 0;
-
     var nbElevator = 0;
 
-    var nbElevatorTot = 0;
-
+    var nbElevatorCol = 0;
 
     $("#residentialoption").change(function () {
 
@@ -98,41 +93,13 @@ function CalculateResidential() {
 
         averageAppartmentsFloor = Math.ceil(nbAppartments / nbFloors);
 
-
-
         nbElevator = Math.ceil(averageAppartmentsFloor / 6);
 
+        nbElevatorCol = Math.ceil(nbFloors / 20)
 
+        nbElevatorCol *= nbElevator;
 
-        nbElevatorTot = nbElevator;
-
-        for (var i = 0; i < nbFloors; i++) {
-
-            counter++;
-
-            if (counter == 21) {
-
-                nbElevatorTot += nbElevator;
-
-                counter = 1;
-
-                wentIn = true;
-
-            }
-
-        }
-
-        if (wentIn == true) {
-
-            $("#numberelevator").val(nbElevatorTot);
-
-        } else {
-
-            $("#numberelevator").val(nbElevator);
-
-        }
-
-        counter = 0;
+        $("#numberelevator").val(nbElevatorCol);
 
     });
 
@@ -154,23 +121,25 @@ function CalculateCommercial() {
 
 function CalculateCorporate() {
 
-    var nbOccupantTot = 0;
-
     var nbOccupant = 0;
 
     var nbFloors = 0;
 
     var nbBasements = 0;
 
+    var nbOccupantFloor = 0;
+
     var total = 0;
+
+    var nbColumn = 0;
+
+    var nbAverageElevatorColumn = 0;
 
     var nbElevator = 0;
 
-    console.log("Allo")
+    var nbtotalElevators = 0;
 
     $("#maximum-occupancy-cor, #number-of-floors-cor, #number-of-basements-cor").change(function () {
-
-
 
         nbOccupant = parseInt($("#maximum-occupancy-cor").val());
 
@@ -178,22 +147,24 @@ function CalculateCorporate() {
 
         nbBasements = parseInt($("#number-of-basements-cor").val());
 
-        toltal = nbOccupant * (nbBasements + nbFloors);
+        total = (nbFloors + nbBasements);
 
-        nbElevator = Math.ceil(total / 1000)
+        nbOccupantFloor = nbOccupant * total;
 
-        console.log(toltal)
-        console.log("test", nbElevator)
+        nbElevator = Math.ceil(nbOccupantFloor / 1000);
 
+        nbColumn = Math.ceil(total / 20);
 
+        nbAverageElevatorColumn = Math.ceil(nbElevator / nbColumn);
 
+        nbtotalElevators = nbAverageElevatorColumn * nbColumn;
+
+        $("#numberelevator").val(nbtotalElevators);
     });
 
 }
 
 function CalculateHybrid() {
-
-    var nbOccupantTot = 0;
 
     var nbOccupant = 0;
 
@@ -201,11 +172,17 @@ function CalculateHybrid() {
 
     var nbBasements = 0;
 
+    var nbOccupantFloor = 0;
+
     var total = 0;
+
+    var nbColumn = 0;
+
+    var nbAverageElevatorColumn = 0;
 
     var nbElevator = 0;
 
-    console.log("Allo2")
+    var nbtotalElevators = 0;
 
     $("#maximum-occupancy-hy, #number-of-floors-hy, #number-of-basements-hy").change(function () {
 
@@ -215,10 +192,19 @@ function CalculateHybrid() {
 
         nbBasements = parseInt($("#number-of-basements-hy").val());
 
+        total = (nbFloors + nbBasements);
 
+        nbOccupantFloor = nbOccupant * total;
+
+        nbElevator = Math.ceil(nbOccupantFloor / 1000);
+
+        nbColumn = Math.ceil(total / 20);
+
+        nbAverageElevatorColumn = Math.ceil(nbElevator / nbColumn);
+
+        nbtotalElevators = nbAverageElevatorColumn * nbColumn;
+
+        $("#numberelevator").val(nbtotalElevators);
     });
-
-
-
 
 }
