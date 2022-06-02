@@ -1,6 +1,22 @@
 /* residentialsection */
 
+var nbOccupant = 0;
 
+var nbFloors = 0;
+
+var nbBasements = 0;
+
+var nbOccupantFloor = 0;
+
+var total = 0;
+
+var nbColumn = 0;
+
+var nbAverageElevatorColumn = 0;
+
+var nbElevator = 0;
+
+var nbtotalElevators = 0;
 
 
 
@@ -157,23 +173,7 @@ $(document).ready(function () {
 
     function CalculateCorporate() {
 
-        var nbOccupant = 0;
 
-        var nbFloors = 0;
-
-        var nbBasements = 0;
-
-        var nbOccupantFloor = 0;
-
-        var total = 0;
-
-        var nbColumn = 0;
-
-        var nbAverageElevatorColumn = 0;
-
-        var nbElevator = 0;
-
-        var nbtotalElevators = 0;
 
         $("#maximum-occupancy-cor, #number-of-floors-cor, #number-of-basements-cor").change(function () {
 
@@ -204,23 +204,7 @@ $(document).ready(function () {
 
     function CalculateHybrid() {
 
-        var nbOccupant = 0;
 
-        var nbFloors = 0;
-
-        var nbBasements = 0;
-
-        var nbOccupantFloor = 0;
-
-        var total = 0;
-
-        var nbColumn = 0;
-
-        var nbAverageElevatorColumn = 0;
-
-        var nbElevator = 0;
-
-        var nbtotalElevators = 0;
 
         $("#maximum-occupancy-hy, #number-of-floors-hy, #number-of-basements-hy").change(function () {
 
