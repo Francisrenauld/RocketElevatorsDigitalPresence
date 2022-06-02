@@ -261,7 +261,7 @@ $(document).ready(function () {
 
         var bigTotal = 0;
 
-        $("input[type='radio").change(function () {
+        $("input[type='radio").click(function () {
 
             if ($(this).val() == "standard") {
 
