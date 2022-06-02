@@ -9,6 +9,12 @@ $("#building-type").change(function () {
 
     } else {
         $('#residentialoption').hide();
+        $("#installationcost").val("");
+        $("#elevatorprice").val("");
+        $("#elevatorTotalCost").val("");
+        $("#projectcost").val("");
+        $("#numberelevator").val("");
+
 
     }
 });
@@ -29,6 +35,11 @@ $("#building-type").change(function () {
         $("#number-of-basements-cor").val('');
         $("#number-of-parking-spots-cor").val('');
         $("#maximum-occupancy-cor").val('');
+        $("#installationcost").val("");
+        $("#elevatorprice").val("");
+        $("#elevatorTotalCost").val("");
+        $("#projectcost").val("");
+        $("#numberelevator").val("");
 
 
     }
@@ -46,6 +57,11 @@ $("#building-type").change(function () {
 
     } else {
         $('#commercialoption').hide();
+        $("#installationcost").val("");
+        $("#elevatorprice").val("");
+        $("#elevatorTotalCost").val("");
+        $("#projectcost").val("");
+        $("#numberelevator").val("");
 
     }
 });
@@ -67,6 +83,11 @@ $("#building-type").change(function () {
         $("#number-of-parking-spots-hy").val('');
         $("#maximum-occupancy-hy").val('');
         $("#business-hours-hy").val('');
+        $("#installationcost").val("");
+        $("#elevatorprice").val("");
+        $("#elevatorTotalCost").val("");
+        $("#projectcost").val("");
+        $("#numberelevator").val("");
     }
 });
 $("#building-type").trigger("change");
@@ -250,6 +271,11 @@ function CalculPrice(nbElevator) {
             $("#elevatorTotalCost").val(elevatorTotPrice);
 
             $("#projectcost").val(bigTotal);
+
+        } else {
+
+
+
 
         }
         if ($(this).val() == "premium") {
