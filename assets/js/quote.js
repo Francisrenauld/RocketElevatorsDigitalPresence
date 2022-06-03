@@ -253,24 +253,24 @@ $(document).ready(function () {
 
                 bigTotal = installPrice + elevatorTotPrice;
 
-                $("#installationcost").val(new Intl.NumberFormat('fr-CA', {
+                $("#installationcost").val(new Intl.NumberFormat('en-CA', {
                     style: 'currency',
-                    currency: "USD",
+                    currency: "CAD",
                 }).format(installPrice));
 
-                $("#elevatorprice").val(new Intl.NumberFormat('fr-CA', {
+                $("#elevatorprice").val(new Intl.NumberFormat('en-CA', {
                     style: 'currency',
-                    currency: "USD",
+                    currency: "CAD",
                 }).format(elevatorPriceUnit));
 
-                $("#elevatorTotalCost").val(new Intl.NumberFormat('fr-CA', {
+                $("#elevatorTotalCost").val(new Intl.NumberFormat('en-CA', {
                     style: 'currency',
-                    currency: "USD",
+                    currency: "CAD",
                 }).format(elevatorTotPrice));
 
-                $("#projectcost").val(new Intl.NumberFormat('fr-CA', {
+                $("#projectcost").val(new Intl.NumberFormat('en-CA', {
                     style: 'currency',
-                    currency: "USD",
+                    currency: "CAD",
                 }).format(bigTotal));
 
                 $("#numberelevator").val(nbElevator);
@@ -288,24 +288,24 @@ $(document).ready(function () {
 
                 bigTotal = installPrice + elevatorTotPrice;
 
-                $("#installationcost").val(new Intl.NumberFormat('fr-CA', {
+                $("#installationcost").val(new Intl.NumberFormat('en-CA', {
                     style: 'currency',
-                    currency: "USD",
+                    currency: "CAD",
                 }).format(installPrice));
 
-                $("#elevatorprice").val(new Intl.NumberFormat('fr-CA', {
+                $("#elevatorprice").val(new Intl.NumberFormat('en-CA', {
                     style: 'currency',
-                    currency: "USD",
+                    currency: "CAD",
                 }).format(elevatorPriceUnit));
 
-                $("#elevatorTotalCost").val(new Intl.NumberFormat('fr-CA', {
+                $("#elevatorTotalCost").val(new Intl.NumberFormat('en-CA', {
                     style: 'currency',
-                    currency: "USD",
+                    currency: "CAD",
                 }).format(elevatorTotPrice));
 
-                $("#projectcost").val(new Intl.NumberFormat('fr-CA', {
+                $("#projectcost").val(new Intl.NumberFormat('en-CA', {
                     style: 'currency',
-                    currency: "USD",
+                    currency: "CAD",
                 }).format(bigTotal));
 
                 $("#numberelevator").val(nbElevator);
@@ -323,24 +323,24 @@ $(document).ready(function () {
 
                 bigTotal = installPrice + elevatorTotPrice;
 
-                $("#installationcost").val(new Intl.NumberFormat('fr-CA', {
+                $("#installationcost").val(new Intl.NumberFormat('en-CA', {
                     style: 'currency',
-                    currency: "USD",
+                    currency: "CAD",
                 }).format(installPrice));
 
-                $("#elevatorprice").val(new Intl.NumberFormat('fr-CA', {
+                $("#elevatorprice").val(new Intl.NumberFormat('en-CA', {
                     style: 'currency',
-                    currency: "USD",
+                    currency: "CAD",
                 }).format(elevatorPriceUnit));
 
-                $("#elevatorTotalCost").val(new Intl.NumberFormat('fr-CA', {
+                $("#elevatorTotalCost").val(new Intl.NumberFormat('en-CA', {
                     style: 'currency',
-                    currency: "USD",
+                    currency: "CAD",
                 }).format(elevatorTotPrice));
 
-                $("#projectcost").val(new Intl.NumberFormat('fr-CA', {
+                $("#projectcost").val(new Intl.NumberFormat('en-CA', {
                     style: 'currency',
-                    currency: "USD",
+                    currency: "CAD",
                 }).format(bigTotal));
 
                 $("#numberelevator").val(nbElevator);
