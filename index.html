@@ -1396,7 +1396,7 @@
           </div>
           <!-- /Alert Mandatory -->
 
-          <form action="php/contact.php" method="post" enctype="multipart/form-data">
+          <form onsubmit="return messageAlert()">
             <fieldset>
               <input type="hidden" name="action" value="contact_send" />
 
@@ -1466,9 +1466,9 @@
 
             <div class="row">
               <div class="col-md-12">
-                <a type="submit" class="btn btn-primary">
+                <button type="submit" class="btn btn-primary">
                   <i class="fa fa-check"></i> SEND MESSAGE
-                </a>
+                </button>
               </div>
             </div>
           </form>
@@ -1632,6 +1632,11 @@
         title: "Company, Inc.",
       });
     });
+
+    function messageAlert() {
+
+      alert("Thank you for your message");
+    }
   </script>
 </body>
 

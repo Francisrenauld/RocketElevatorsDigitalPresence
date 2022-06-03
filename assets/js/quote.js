@@ -92,17 +92,17 @@ $(document).ready(function () {
     });
     $("#building-type").trigger("change");
 
-    /* hybridesection */
+    /* hybridsection */
 
     $("#building-type").change(function () {
 
-        if ($(this).val() == "hybride") {
-            $('#hybrideoption').show();
+        if ($(this).val() == "hybrid") {
+            $('#hybridoption').show();
             CalculateHybrid();
 
 
         } else {
-            $('#hybrideoption').hide();
+            $('#hybridoption').hide();
             $("#number-of-companies-hy").val('');
             $("#number-of-floors-hy").val('');
             $("#number-of-basements-hy").val('');
@@ -160,9 +160,11 @@ $(document).ready(function () {
 
         var nbElevator = 0;
 
-        $("#number-of-elevators").change(function () {
+        $("#number-of-elevators").on("keyup click blur change", function (e) {
 
             nbElevator = $("#number-of-elevators").val();
+
+            nbElevator = nbElevator || 0
 
             CalculPrice(nbElevator)
 
@@ -174,7 +176,7 @@ $(document).ready(function () {
 
     function CalculateCorporate() {
 
-        $("#maximum-occupancy-cor, #number-of-floors-cor, #number-of-basements-cor").change(function () {
+        $("#maximum-occupancy-cor, #number-of-floors-cor, #number-of-basements-cor").on("keyup click blur change", function (e) {
 
             nbOccupant = parseInt($("#maximum-occupancy-cor").val());
 
@@ -194,6 +196,8 @@ $(document).ready(function () {
 
             nbtotalElevators = nbAverageElevatorColumn * nbColumn;
 
+            nbtotalElevators = nbtotalElevators || 0
+
             CalculPrice(nbtotalElevators);
 
             $("#numberelevator").val(nbtotalElevators);
@@ -203,7 +207,7 @@ $(document).ready(function () {
 
     function CalculateHybrid() {
 
-        $("#maximum-occupancy-hy, #number-of-floors-hy, #number-of-basements-hy").change(function () {
+        $("#maximum-occupancy-hy, #number-of-floors-hy, #number-of-basements-hy").on("keyup click blur change", function (e) {
 
             nbOccupant = parseInt($("#maximum-occupancy-hy").val());
 
@@ -223,11 +227,14 @@ $(document).ready(function () {
 
             nbtotalElevators = nbAverageElevatorColumn * nbColumn;
 
+            nbtotalElevators = nbtotalElevators || 0
+
             CalculPrice(nbtotalElevators)
 
             $("#numberelevator").val(nbtotalElevators);
         });
     }
+
 
     function CalculPrice(nbElevator) {
 
@@ -241,7 +248,7 @@ $(document).ready(function () {
 
         var bigTotal = 0;
 
-        $("input[type='radio").click(function () {
+        $("input[type=radio]").click(function () {
 
             if ($(this).val() == "standard") {
 
