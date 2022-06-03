@@ -132,7 +132,7 @@ $(document).ready(function () {
 
         var nbElevatorTot = 0;
 
-        $("#residentialoption").change(function () {
+        $("#residentialoption").on("keyup click blur change", function (e) {
 
             nbAppartments = parseInt($("#number-of-apartments").val());
 
@@ -146,13 +146,15 @@ $(document).ready(function () {
 
             nbElevatorTot *= nbElevator;
 
+            nbElevatorTot = nbElevatorTot || 0
+
             CalculPrice(nbElevatorTot)
 
             $("#numberelevator").val(nbElevatorTot);
 
         });
 
-    }
+    };
 
     function CalculateCommercial() {
 
