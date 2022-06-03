@@ -18,11 +18,8 @@ var nbElevator = 0;
 
 var nbtotalElevators = 0;
 
-
-
-
 $(document).ready(function () {
-    CalculPrice(0);
+
     $("#building-type").change(function () {
 
         if ($(this).val() == "residential") {
@@ -38,6 +35,8 @@ $(document).ready(function () {
             $("#elevatorTotalCost").val("");
             $("#projectcost").val("");
             $("#numberelevator").val("");
+            $("#elevatorTotalCost").val("");
+            $("#numberelevator").val("")
 
 
         }
@@ -173,8 +172,6 @@ $(document).ready(function () {
 
     function CalculateCorporate() {
 
-
-
         $("#maximum-occupancy-cor, #number-of-floors-cor, #number-of-basements-cor").change(function () {
 
             nbOccupant = parseInt($("#maximum-occupancy-cor").val());
@@ -204,8 +201,6 @@ $(document).ready(function () {
 
     function CalculateHybrid() {
 
-
-
         $("#maximum-occupancy-hy, #number-of-floors-hy, #number-of-basements-hy").change(function () {
 
             nbOccupant = parseInt($("#maximum-occupancy-hy").val());
@@ -230,7 +225,6 @@ $(document).ready(function () {
 
             $("#numberelevator").val(nbtotalElevators);
         });
-
     }
 
     function CalculPrice(nbElevator) {
@@ -259,13 +253,25 @@ $(document).ready(function () {
 
                 bigTotal = installPrice + elevatorTotPrice;
 
-                $("#installationcost").val(installPrice);
+                $("#installationcost").val(new Intl.NumberFormat('fr-CA', {
+                    style: 'currency',
+                    currency: "USD",
+                }).format(installPrice));
 
-                $("#elevatorprice").val(elevatorPriceUnit);
+                $("#elevatorprice").val(new Intl.NumberFormat('fr-CA', {
+                    style: 'currency',
+                    currency: "USD",
+                }).format(elevatorPriceUnit));
 
-                $("#elevatorTotalCost").val(elevatorTotPrice);
+                $("#elevatorTotalCost").val(new Intl.NumberFormat('fr-CA', {
+                    style: 'currency',
+                    currency: "USD",
+                }).format(elevatorTotPrice));
 
-                $("#projectcost").val(bigTotal);
+                $("#projectcost").val(new Intl.NumberFormat('fr-CA', {
+                    style: 'currency',
+                    currency: "USD",
+                }).format(bigTotal));
 
                 $("#numberelevator").val(nbElevator);
 
@@ -282,13 +288,25 @@ $(document).ready(function () {
 
                 bigTotal = installPrice + elevatorTotPrice;
 
-                $("#installationcost").val(installPrice);
+                $("#installationcost").val(new Intl.NumberFormat('fr-CA', {
+                    style: 'currency',
+                    currency: "USD",
+                }).format(installPrice));
 
-                $("#elevatorprice").val(elevatorPriceUnit);
+                $("#elevatorprice").val(new Intl.NumberFormat('fr-CA', {
+                    style: 'currency',
+                    currency: "USD",
+                }).format(elevatorPriceUnit));
 
-                $("#elevatorTotalCost").val(elevatorTotPrice);
+                $("#elevatorTotalCost").val(new Intl.NumberFormat('fr-CA', {
+                    style: 'currency',
+                    currency: "USD",
+                }).format(elevatorTotPrice));
 
-                $("#projectcost").val(bigTotal);
+                $("#projectcost").val(new Intl.NumberFormat('fr-CA', {
+                    style: 'currency',
+                    currency: "USD",
+                }).format(bigTotal));
 
                 $("#numberelevator").val(nbElevator);
 
@@ -305,29 +323,29 @@ $(document).ready(function () {
 
                 bigTotal = installPrice + elevatorTotPrice;
 
-                /* var test = new Intl.NumberFormat('fr-CA', {
-                     style: 'currency',
-                     currency: 'EUR',
-                 }).format(elevatorPriceUnit);
+                $("#installationcost").val(new Intl.NumberFormat('fr-CA', {
+                    style: 'currency',
+                    currency: "USD",
+                }).format(installPrice));
 
-                 console.log(test)*/
+                $("#elevatorprice").val(new Intl.NumberFormat('fr-CA', {
+                    style: 'currency',
+                    currency: "USD",
+                }).format(elevatorPriceUnit));
 
-                $("#installationcost").val(installPrice);
+                $("#elevatorTotalCost").val(new Intl.NumberFormat('fr-CA', {
+                    style: 'currency',
+                    currency: "USD",
+                }).format(elevatorTotPrice));
 
-                $("#elevatorprice").val(elevatorPriceUnit);
-
-                $("#elevatorTotalCost").val(elevatorTotPrice);
-
-                $("#projectcost").val(bigTotal);
+                $("#projectcost").val(new Intl.NumberFormat('fr-CA', {
+                    style: 'currency',
+                    currency: "USD",
+                }).format(bigTotal));
 
                 $("#numberelevator").val(nbElevator);
 
             }
-
         });
-
-
-
     }
-
 });
